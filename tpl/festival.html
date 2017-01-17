@@ -1,0 +1,144 @@
+<!DOCTYPE >
+<html>
+<head>
+	<meta charset="utf-8">
+	<?php
+		ral_set_pathinfo('/Video/Detail');
+		$headers = array('Host'=>'vcast.baidu.com');
+        		$ralConf = 'moboapi_form';
+			$ralRes = ral($ralConf,'post',array('video_id'=> $_GET['video_id']),rand(),$headers);
+       			$result = json_decode($ralRes, true);
+	?>
+	
+
+	<title><?php echo $result['data']['title'];?></title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta property="og:url" content="<?php echo 'http://h5.hunter.tube/public/videoapp_share/publish/en/detail.php?video_id='.$result['data']['video_id'];?>">
+    <meta property="og:title" content="<?php echo $result['data']['title'];?>">
+    <meta property="og:image" content="<?php echo 'http://img.phone.baidu.com/public/uploads/'.$result['data']['thumb'];?>"/>
+    <meta property="og:description" content="More Trailers in Short Tube  App">
+	<meta property="fb:app_id" content="<%= appid %>"/>
+	<meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="Short Tube "/>
+    <meta name="twitter:description" content="Click to watch the video. Short Tube :hunt for the best clips."/>
+    <meta name="twitter:title" content="<?php echo $result['data']['title'];?>"/>
+    <meta name="twitter:image" content="<?php echo 'http://img.phone.baidu.com/public/uploads/'.$result['data']['thumb'];?>"/>
+	<link rel="shortcut icon" href="http://img.phone.baidu.com/public/uploads/store_4/1/a/4/1a4261f10f4aa96676b71b0169177137.png?__inline" />
+	
+ <body>
+	<?php
+                function ch2arr($str)
+                {
+                    $length = mb_strlen($str, 'utf-8');
+                    $array = [];
+                    for ($i=0; $i<$length; $i++)  
+                        $array[] = mb_substr($str, $i, 1, 'utf-8');    
+                    return $array;
+                }
+		$url = "http://test.vcast.baidu.com/Video/UserVideo?video_id=".$_GET["video_id"];
+		//$url = "http://test.vcast.baidu.com/Video/UserVideo?video_id=1006";
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+		$result = curl_exec($ch);
+		$result = json_decode($result,true);
+		
+	?>
+	<div class="fp-total">
+		<div class="fp-head">
+			<div class="fp-name fp-words"><?php echo $result['data']['username'];?></div>
+		</div>
+		<div class="fp-bgpaper">
+			<?php echo '<div class="ve"><video id="myVideo" class="fp-video1"  src="http://img.phone.baidu.com/public/uploads/'.$result['data']['video_url'].'"  type="video/mp4"></video> <img src="../image/player.png" class="play"></img></div>';?>
+			<div class="fp-benediction">
+				<div class="fp-benediction-words fp-words"><?php echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$result['data']['greetings'];?></div>
+			</div>
+			<div>
+				<div class="fp-circles">
+					<?php
+						$arr = ch2arr($result['data']['title']);
+						foreach ($arr as $k => $v){
+							echo '<div class="fp-circle fp-words">'.$v.'</div>';
+
+						} 
+					?>
+				</div>
+
+				<div class="fp-description fp-words"><?php 
+
+						//$result["data"]["description"] = "请记住 无论我们最后 疏远成什么样子 一个红包就能 回到从前";
+						$desc = split(" ",$result["data"]["content"]);
+						foreach ($desc as $k => $v){
+						echo '<div >'.$v.'</div><br/>';
+						}
+					?></div>
+							</div>
+
+							<a href="http://www.baidu.com"><img class="fp-foot" src="../image/foot.png"></img></a>
+		</div>
+	</div>
+</body>
+<script type="text/html" id="video-tpl">
+	<div id="video-box" class="video-box">
+		<div id="player"></div>
+	</div>
+	<div class="video-info">
+		<h1>{{data.title}}</h1>
+		<p class="view-cnt">{{data.watch_count}} <%= detail.view %></p>
+		<a href="<%= apk_link %>" class="btn install-btn" data-pos="play video download"><%= detail.install %></a>
+	</div>
+</script>
+<script type="text/html" id="related-tpl">
+{{each data as item}}
+	<a id="{{item.video_id}}">
+		<img src="<%= detail.imgPrefix %>{{item.thumb}}">
+		<div class="video-info">
+			<h1>{{item.title}}</h1>
+			<p class="view-cnt">{{item.time}}   |   {{item.watch_count}} <%= detail.view %></p>
+		</div>
+	</a>
+{{/each}}
+</script>
+<script type="text/html" id="comment-tpl">
+{{each data as item}}
+	<div class="vcomment">
+		<img src="{{item.headportrait}}">
+		<div class="vcomment-info">
+			<h4>{{item.name}}</h4>
+			<p class="date">{{item.create_time}}</p>
+			<div class="vcomment-detail">
+				{{item.content}}
+			</div>
+		</div>
+	</div>
+{{/each}}
+</script>
+
+<link rel="stylesheet" href="../css/common.less">
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script type="text/javascript" src="../js/video.min.js"></script>
+<script type="text/javascript" src="../js/template.js"></script>
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/rem.js"></script>
+<script type="text/javascript">
+$(function(){
+ var video = $("#myVideo")[0];
+ var video = $("#myVideo");
+ $(".ve").click(function(){
+  if(video[0].paused){
+   video[0].play();
+   $(".play").css("opacity","0");
+  }
+  else{
+   $(".play").css("opacity","1");
+            video[0].pause();
+        }
+  return false;
+    });
+});
+ 
+</script>
+</html>
+

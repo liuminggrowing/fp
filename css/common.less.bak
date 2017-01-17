@@ -1,0 +1,202 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	background-color: #E0292A;
+}
+
+.fp-total {
+	text-align: center;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background: url("../image/bg.png");
+	background-repeat: no-repeat;
+	width: 727px;
+	background-size: 100%;
+	//height: 1376px;
+}
+
+.fp-head{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 20px;
+	width: 100%;
+	background: url("../image/head.png") no-repeat;
+	background-size: 100%;
+}
+.fp-bgpaper{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background: url("../image/bgpaper.png");
+	background-repeat: no-repeat;
+	width: 720;
+	//height: 1333px;
+	text-align: center;
+}
+
+.fp-video {
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	text-align: center;
+	width: 568px;
+	height: 428px;
+}
+.fp-benediction {
+	margin-top: 20px;
+	position: relative;
+	background: url("../image/benediction.png");
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	width: 570px;
+	height: 162px;
+	background-size: 100%;
+}
+.fp-greetings {
+	margin-top: 20px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 568px;
+	height: 428px;
+}
+.fp-circles {
+	position: relative;
+	margin-top: 60px;
+	margin-left: 85%;
+	width: 67px;
+	height: 428px;
+}
+.fp-circle {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	border: 10px;
+	width: 67px;
+	height: 67px;
+	background: url("../image/circle.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.fp-foot {
+	margin-top: -20px;
+	position:relative;
+	text-align: center;
+	background: url("../image/foot.png");
+	backgroun-repeat: no-repeat;
+	background-size: 100%;
+}
+
+@media screen and  (max-width: 425px){
+.fp-total {
+	text-align: center;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background: url("../image/bg.png");
+	background-repeat: no-repeat;
+	width: 100%;
+	background-size: 100%;
+}
+
+.fp-head{
+	margin-top: 15px;
+	//position: relative;
+	//margin-left: auto;
+	//margin-right: auto;
+	//top: 15px;
+	//width: 100%;
+	//height: auto;
+	//padding-top:30.85%;
+	//background: url("../image/head.png") no-repeat;
+	//background-size: 100%;
+	//background-size: cover;
+	//background-position:center;
+}
+.fp-bgpaper{
+	position: relative;
+	top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	background: url("../image/bgpaper.png");
+	background-repeat: no-repeat;
+	width: 100%;
+	background-size: 100%;
+	text-align: center;
+	margin-top: 0;
+}
+
+.fp-video {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	text-align: center;
+	width: 80%;
+	height: 235pxpx;
+	top: 15px;	
+}
+.fp-benediction {
+	margin-top: 20px;
+	position: relative;
+	background: url("../image/benediction.png");
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	background-size: 100%;
+	width: 80%;
+	height: 160px;
+}
+.fp-greetings {
+	margin-top: 20px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background-size: 100%;
+	width: 80%;
+	height: 428px;
+}
+.fp-circles {
+	position: relative;
+	margin-top: 60px;
+	margin-left: 85%;
+	width: 7%;
+	height: 428px;
+}
+.fp-circle {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	border: 10px;
+	background: url("../image/circle.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 80%;
+	height: 67px;
+}
+.fp-foot {
+	margin-top: -20px;
+	margin-left: auto;
+	margin-right: auto;
+	position:relative;
+	text-align: center;
+	background: url("../image/foot.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 80%;
+	height: 100%;
+
+}
+
+
+}

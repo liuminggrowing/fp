@@ -1,0 +1,373 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+    margin: 0;
+    padding: 0;
+}
+.ve{
+ text-align: center;
+ position: relative;
+}
+.ve img{
+ position: absolute;
+ width: 40px;
+ height: 40px;
+ top: 4.5rem;
+ left: 7rem;
+}
+
+@font-face {
+	font-family: 'STZhongsong';
+	src: url("../font/STZhongsong.ttf") format("truetype");
+}
+body {
+	background-color: #E0292A;
+}
+.fp-total {
+	text-align: center;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	background: url("../image/bg.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.fp-underline{
+	border-right: 2px solid #af7900;
+}
+.fp-head{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background: url("../image/head.png") no-repeat;
+	background-size: 100%;
+}
+.fp-words {
+	font-family: "STZhongsong", monospace;
+ 	font-size:16px;font-style:normal;
+    	-webkit-font-smoothing: antialiased;
+    	-webkit-text-stroke-width: 0.2px;
+    	-moz-osx-font-smoothing: grayscale;
+}
+.fp-name{
+	width: 50%;
+	overflow:hidden;   
+	color: #E0292A;
+	margin-left: auto;
+	margin-right: auto;
+}
+.fp-bgpaper{
+	position: relative;
+	margin: 10px;
+	background: url("../image/bgpaper.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin-left: auto;
+	margin-right: auto;
+//	min-height:580px;
+}
+.fp-video1 {
+	margin-top: 20px;
+	width: 90%;
+}
+.fp-video {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	text-align: center;
+	width: 80%;
+	height: 235pxpx;
+	top: 15px;	
+}
+.fp-benediction {
+	position: relative;
+	background: url("../image/benediction.png");
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	background-size: 100% 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 90%;
+	display: table;
+	text-align: left;
+}
+.fp-square {
+	position: relative;
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+
+.fp-description {
+	position: relative;
+	float: right;
+	margin-right: 15px;
+	writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	text-decoration:overline;
+	line-height: 50px;
+	margin-bottom: 50px;
+	margin-top: 20px;
+	color: #af7900;
+	text-align: left;
+	max-width: 70%;
+	overflow: hidden;
+}
+.fp-circles {
+	float: right;
+	margin-right: 10%;
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+.fp-circle {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background: url("../image/circle.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	font-size: x-large;
+}
+.fp-foot {
+	position: relative;
+	margin-bottom: 10px; 
+	width: 97%;
+}
+.fp-benediction-words {
+	display: table-cell;
+	vertical-align:middle;
+	width:80%;
+	overflow:hidden;
+	color: #E0292A;
+	padding-left: 10px;
+	padding-right: 10px;
+	line-height: 30px;
+}
+.fp-middle {
+	display:table-cell;
+	vertical-align:middle;
+	margin-left:10px;
+} 
+
+//大于426px（平板或笔记本）
+@media screen and (min-width: 426px) {
+.ve img {
+ 	width: 100px;
+ 	height: 100px;
+ 	top: 3.8rem;
+ 	left: 6.8rem;
+}
+.fp-total {
+	position: relative;
+	padding-bottom: 60px;
+	width: 727px;
+	background-size: 100% 100%;
+}
+
+.fp-head{
+	top: 15px;
+	width: 723px;
+	height: 109px;
+}
+.fp-name {
+	height:109pxpx;
+	line-height: 109px;   
+	font-size: 30px;
+}
+.fp-bgpaper{
+	top: 20px;
+	width: 660px;
+}
+
+.fp-video1 {
+	margin-top: 40px;
+	width: 90%;
+}
+
+.fp-benediction {
+	margin-top: 20px;
+	position: relative;
+	background: url("../image/benediction.png");
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	width: 570px;
+	height: 162px;
+	background-size: 100% 100%;
+}
+.fp-benediction-words {
+	padding: 50px;
+	font-size: x-large;
+}
+.fp-greetings {
+	margin-top: 20px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 568px;
+}
+
+.fp-description {
+
+	font-size: 25px;
+	min-width: 70%;
+	max-height: 400px;
+	overflow: hidden;	
+	line-height: 40px;
+	height: 300px;
+	margin-right: 50px;
+	margin-top: 30px;
+}
+.fp-circles {
+	margin-bottom: 200px;
+}
+.fp-circle {
+	width: 60px;
+	height: 60px;
+	margin-bottom: 10px;
+	text-align: center;
+	line-height: 60px;
+	color: #fff;
+	font-size: xx-large;
+}
+.fp-foot {
+}
+}
+
+@media screen and (min-width:768px) {
+.ve img{
+ 	width: 100px;
+ 	height: 100px;
+ 	top: 4rem;
+ 	left: 6.4rem;
+}
+}
+
+@media screen and (min-width:1024px) {
+.ve img{
+ 	width: 100px;
+ 	height: 100px;
+ 	top: 148px;
+ 	left: 285px;
+}
+}
+/*
+@media screen and (min-width:1279px) {
+.ve img{
+ 	width: 100px;
+ 	height: 100px;
+ 	top: 2rem;
+ 	left: 4rem;
+}
+}*/
+
+
+@media screen and (min-width:1440px) {
+.ve img{
+ 	width: 100px;
+ 	height: 100px;
+ 	top: 2rem;
+ 	left: 3.5rem;
+}
+
+}
+
+@media screen and (min-width:2560px) {
+.ve img{
+ 	width: 100px;
+ 	height: 100px;
+ 	top: 1rem;
+ 	left: 2rem;
+}
+
+}
+
+
+//小于425px（手机）
+@media screen and (max-width: 425px){
+.fp-total {
+	padding-bottom: 10px;
+	width: 100%;
+	background-size: 100% 100%;
+}
+
+.fp-head{
+	margin-top: 15px;
+	min-height: 65px;
+	background-size: 100%;
+}
+.fp-name {
+	font-size: 16px;
+	height: 65px;
+	line-height: 65px;   
+}
+.fp-bgpaper{
+	position: relative;
+	margin: 10px;
+	background: url("../image/bgpaper.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.fp-video1 {
+	margin-top: 20px;
+	width: 90%;
+}
+
+.fp-benediction {
+	margin-top: 10px;
+	height: 70px;
+}
+.fp-description {
+	max-width: 70%;
+	overflow: hidden;	
+	line-height: 25px;
+}
+.fp-square {
+	position: relative;
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+.fp-circle {
+	margin-bottom: 3px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+}
+}
+
+@media screen and (max-width: 375px){
+.fp-head{
+	margin-top: 15px;
+	min-height: 60px;
+	background-size: 100%;
+}
+
+.fp-name {
+	height: 60px;
+	line-height: 60px;   
+}
+
+.fp-description {
+	line-height: 25px;
+}
+}
+@media screen and (max-width: 320px){
+.fp-head{
+	margin-top: 15px;
+	min-height: 50px;
+	max-height: 60px;
+	background-size: 100%;
+}
+.fp-description {
+	line-height: 20px;
+}
+.fp-name {
+	height: 50px;
+	line-height: 50px;   
+}
+}

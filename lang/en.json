@@ -1,0 +1,17 @@
+{
+	"lang": "en",
+	"mm": "Short Tube",
+	"appid": "1573682389604262",
+	"apk_link": "http://download.androidapp.baidu.com/public/uploads/store_0/b/4/c/moviehunter-release_r1fef108-123559_rezip.apk",
+	"detail": {
+		"title": "Short Tube",
+		"view": "VIEWS",
+		"install": "Install To Watch More",
+		"related": "Related",
+		"more_related": "More Related Videos",
+		"more_comment": "More Comments",
+		"comment": "Comments",
+		"url": "http://h5.hunter.tube/public/videoapp_share/publish/wap/en/detail.php",
+		"imgPrefix": "http://img.phone.baidu.com/public/uploads/"
+	}
+}
